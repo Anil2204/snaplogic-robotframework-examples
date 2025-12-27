@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-12-12T11:02:10.356417" rpa="false" schemaversion="5">
+<suite id="s1" name="OTS QLIK DLY" source="/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/suite/pipeline_tests/oracle/OTS_QLIK_DLY.robot">
+<kw name="Check Pipeline Connections" type="SETUP">
+<kw name="Wait Until Plex Status Is Up">
+<msg time="2025-12-12T11:02:10.917239" level="FAIL">No keyword with name 'Wait Until Plex Status Is Up' found.</msg>
+<arg>/${ORG_NAME}/${GROUNDPLEX_LOCATION_PATH}/${GROUNDPLEX_NAME}</arg>
+<status status="FAIL" start="2025-12-12T11:02:10.917161" elapsed="0.000149">No keyword with name 'Wait Until Plex Status Is Up' found.</status>
+</kw>
+<kw name="Connect to Oracle Database" owner="database">
+<arg>${ORACLE_DATABASE}</arg>
+<arg>${ORACLE_USER}</arg>
+<arg>${ORACLE_PASSWORD}</arg>
+<arg>${ORACLE_HOST}</arg>
+<arg>${ORACLE_PORT}</arg>
+<doc>Sets up Oracle database connection
+*Arguments:*
+- None (uses environment variables for connection)
+*Example:*
+| Connect to Oracle Database |</doc>
+<status status="NOT RUN" start="2025-12-12T11:02:10.917548" elapsed="0.000032"/>
+</kw>
+<kw name="Connect to Postgres Database" owner="database">
+<arg>${POSTGRES_DATABASE}</arg>
+<arg>${POSTGRES_USER}</arg>
+<arg>${POSTGRES_PASSWORD}</arg>
+<arg>${POSTGRES_HOST}</arg>
+<arg>${POSTGRES_PORT}</arg>
+<doc>Establishes connection to PostgreSQL database using psycopg2 driver
+📋 ASSERTIONS:
+• Database connection is successfully established
+• PostgreSQL server is accessible at specified host and port
+• Database credentials are valid and authenticated
+• Database name exists and is accessible
+• Connection is ready for SQL operations</doc>
+<status status="NOT RUN" start="2025-12-12T11:02:10.917757" elapsed="0.000027"/>
+</kw>
+<status status="FAIL" start="2025-12-12T11:02:10.912759" elapsed="0.005149">No keyword with name 'Wait Until Plex Status Is Up' found.</status>
+</kw>
+<test id="s1-t1" name="End To End Pipeline Execution" line="73">
+<doc>Full ETL flow including extract, delete, join, insert operations.</doc>
+<tag>end_to_end</tag>
+<tag>etl</tag>
+<tag>regression</tag>
+<status status="FAIL" start="2025-12-12T11:02:10.918009" elapsed="0.000482">Parent suite setup failed:
+No keyword with name 'Wait Until Plex Status Is Up' found.</status>
+</test>
+<doc>Test Suite for the OTS_QLIK_DLY Pipeline
+This suite validates the ETL workflow for:
+1. Extracting data from PostgreSQL (qlik_ots_daily table)
+2. Deleting old data from Oracle (OTS_DAILY table)
+3. Joining and transforming data
+4. Inserting refreshed data into Oracle</doc>
+<status status="FAIL" start="2025-12-12T11:02:10.358531" elapsed="0.560534">Suite setup failed:
+No keyword with name 'Wait Until Plex Status Is Up' found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">end_to_end</stat>
+<stat pass="0" fail="1" skip="0">etl</stat>
+<stat pass="0" fail="1" skip="0">regression</stat>
+</tag>
+<suite>
+<stat name="OTS QLIK DLY" id="s1" pass="0" fail="1" skip="0">OTS QLIK DLY</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-12T11:02:10.349510" level="WARN">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/suite/pipeline_tests/oracle/OTS_QLIK_DLY.robot' on line 104: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-12T11:02:10.408941" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/suite/pipeline_tests/oracle/OTS_QLIK_DLY.robot' on line 11: Importing library 'oracledb' failed: ModuleNotFoundError: No module named 'oracledb'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/lib/python310.zip
+  /usr/lib/python3.10
+  /usr/lib/python3.10/lib-dynload
+  /usr/local/lib/python3.10/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+<msg time="2025-12-12T11:02:10.409993" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/suite/pipeline_tests/oracle/OTS_QLIK_DLY.robot' on line 12: Importing library 'DependencyLibrary' failed: ModuleNotFoundError: No module named 'DependencyLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/lib/python310.zip
+  /usr/lib/python3.10
+  /usr/lib/python3.10/lib-dynload
+  /usr/local/lib/python3.10/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+<msg time="2025-12-12T11:02:10.418358" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/suite/pipeline_tests/oracle/OTS_QLIK_DLY.robot' on line 14: Resource file 'snaplogic_common_robot/snaplogic_apis_keywords/snaplogic_keywords.resource' does not exist.</msg>
+<msg time="2025-12-12T11:02:10.557503" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/resources/files.resource' on line 13: Importing library 'CSVLibrary' failed: ModuleNotFoundError: No module named 'CSVLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/lib/python310.zip
+  /usr/lib/python3.10
+  /usr/lib/python3.10/lib-dynload
+  /usr/local/lib/python3.10/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+<msg time="2025-12-12T11:02:10.558313" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/resources/files.resource' on line 14: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/lib/python310.zip
+  /usr/lib/python3.10
+  /usr/lib/python3.10/lib-dynload
+  /usr/local/lib/python3.10/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+<msg time="2025-12-12T11:02:10.603422" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/resources/general.resource' on line 9: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/lib/python310.zip
+  /usr/lib/python3.10
+  /usr/lib/python3.10/lib-dynload
+  /usr/local/lib/python3.10/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+<msg time="2025-12-12T11:02:10.721519" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/resources/database.resource' on line 14: Importing library 'psycopg2' failed: ModuleNotFoundError: No module named 'psycopg2'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/lib/python310.zip
+  /usr/lib/python3.10
+  /usr/lib/python3.10/lib-dynload
+  /usr/local/lib/python3.10/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+<msg time="2025-12-12T11:02:10.722472" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/resources/database.resource' on line 15: Importing library 'pymssql' failed: ModuleNotFoundError: No module named 'pymssql'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/lib/python310.zip
+  /usr/lib/python3.10
+  /usr/lib/python3.10/lib-dynload
+  /usr/local/lib/python3.10/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+<msg time="2025-12-12T11:02:10.883622" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/resources/files.resource' on line 22: Resource file 'snaplogic_common_robot/snaplogic_apis_keywords/snaplogic_keywords.resource' does not exist.</msg>
+<msg time="2025-12-12T11:02:10.910864" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/suite/pipeline_tests/oracle/oracle.robot' on line 18: Setting 'Suite Setup' is not allowed in resource file.</msg>
+<msg time="2025-12-12T11:02:10.911074" level="ERROR">Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/suite/pipeline_tests/oracle/OTS_QLIK_DLY.robot' on line 17: Error in file '/mnt/c/Users/GAC-LP0029.DESKTOP-TMBFTL5/Downloads/RFA_automation/snaplogic-robotframework-examples/{{cookiecutter.primary_pipeline_name}}/test/suite/pipeline_tests/oracle/oracle.robot' on line 49: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>

@@ -127,7 +127,7 @@ Load Single Env File
         RETURN
     END
 
-    ${env_content}=    Get File    ${file_path}
+    ${env_content}=    Get File    ${file_path}    encoding=utf-8-sig
     @{env_lines}=    Split To Lines    ${env_content}
 
     FOR    ${line}    IN    @{env_lines}

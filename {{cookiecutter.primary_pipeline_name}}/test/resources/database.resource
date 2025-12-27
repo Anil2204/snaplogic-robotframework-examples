@@ -124,7 +124,7 @@ Disconnect from Database
     ...    • Connection cleanup is completed successfully
 
     Log    🔌 Disconnecting from database...
-    Disconnect From Database
+    DatabaseLibrary.Disconnect From Database
     Log    ✅ Successfully disconnected from database
 
 Test Database Connection

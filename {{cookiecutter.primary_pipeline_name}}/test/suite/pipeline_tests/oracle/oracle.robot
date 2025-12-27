@@ -156,3 +156,5 @@ Check connections
 Initialize Variables
     ${unique_id}=    Get Unique Id
     Set Suite Variable    ${unique_id}    ${unique_id}
+This is my pipeline available in src under pipelines, OTS_QLIK_DLY.slp    and my robot test file is under suite pipeline_tets under oracle, available here as OTS_QLIK_DLY.robot
+
