@@ -17,7 +17,6 @@ Resource            ../../../resources/files.resource    # CSV/JSON file operati
 
 Suite Setup         Check connections    # Check if the connection to the Oracle database is successful and snaplex is up
 
-
 *** Variables ***
 # Project Configuration
 
